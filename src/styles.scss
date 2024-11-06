@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary: #0095f6;
+    --white: #f0f0f0;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.input-form {
+    border: 1px solid #b6b1b1;
+    width: 93%;
+    padding: 14px 10px;
+    border-radius: 4px;
+    font-size: 1em;
+}
