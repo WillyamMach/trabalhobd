@@ -18,11 +18,11 @@ export class LoginComponent {
 	public username!: string;
 	public password!: string;
 
-	constructor(private loginService: LoginService, private http: HttpClient) {}
+	constructor(private loginService: LoginService) {}
 
 	login() {
-		this.loginService.verifyLogin(this.username, this.password).subscribe((resp) => {
-			console.log(resp)
-		})
+		// this.loginService.verifyLogin(this.username, this.password).subscribe((resp) => {
+		// 	console.log(resp)
+		// })
 	}
 }
