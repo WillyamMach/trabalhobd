@@ -2,16 +2,15 @@
     <div class="login-content">
         <section class="login-header">
             <h1>
-                Welcome,
-                <span>User</span>
+                Bem-vindo
             </h1>
         </section>
         <form class="login-body">
-            <input type="text" name="username" [(ngModel)]="username" class="input-form" aria-label="type your username" placeholder="Username">
-            <input type="text" name="password" [(ngModel)]="password" class="input-form" aria-label="Type your password" placeholder="Password">
+            <input type="text" name="username" [(ngModel)]="username" class="input-form" aria-label="Escreva seu e-mail ou usuário" placeholder="Nome de usuário ou E-mail">
+            <input type="text" name="password" [(ngModel)]="password" class="input-form" aria-label="Escreva a sua senha" placeholder="Senha">
 
-            <button type="button" title="Enter" (click)="login()">Enter</button>
-            <a>Don't have an account? <span>Sign In</span></a>
+            <button type="button" title="Enter" (click)="login()">Entrar</button>
+            <a>Não tem conta? <span (click)="redirect('register')">Cadastre-se</span></a>
         </form>
     </div>
 </div>

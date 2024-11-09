@@ -1,6 +1,6 @@
 :root {
     --primary: #0095f6;
-    --secondary: #02e7ae;
+    --secondary: #06c595;
     --white: #f0f0f0;
 }
 
@@ -16,4 +16,5 @@
     padding: 12px 10px;
     border-radius: 3px;
     font-size: 1em;
+    background-color: var(--white);
 }
