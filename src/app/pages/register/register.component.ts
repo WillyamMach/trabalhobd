@@ -19,18 +19,11 @@ export class RegisterComponent {
   public password!: string;
   public username!: string;
   public email!: string;
-  public registerForm = new FormGroup({
-    username: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', Validators.required)
-  });
 
   constructor(private router: Router, private registerService: RegisterService) {}
 
   public register() {
-    this.registerService.registerUser(this.username, this.email, this.password).subscribe((resp) => {
-      console.log(resp)
-    })
+    this.registerService.registerUser(this.username, this.email, this.password).subscribe((resp) => {})
   }
 
   public redirect(page: string) {

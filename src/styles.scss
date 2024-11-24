@@ -1,7 +1,9 @@
 :root {
     --primary: #0095f6;
     --secondary: #06c595;
+    --danger: #e2504c;
     --white: #f0f0f0;
+    --grey: #9c9999;
 }
 
 * {
@@ -18,3 +20,7 @@
     font-size: 1em;
     background-color: var(--white);
 }
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

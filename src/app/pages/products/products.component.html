@@ -1,0 +1,53 @@
+<nav>
+    <app-navbar></app-navbar>
+</nav>
+<main>
+    <div>
+        <h2>Cadastro de Produtos</h2>
+    </div>
+
+    <div class="error-message">
+        <p>{{ error }}</p>
+    </div>
+
+    <form>
+        <div class="form-fields">
+            <div class="formInputs">
+                <label for="productName">Nome do Produto</label>
+                <input type="text" class="input-form" placeholder="Nome do Produto" [(ngModel)]="productName" name="productName" aria-label="Nome do produto" >
+            </div>
+            <div class="formInputs">
+                <label for="purchaseValue">Valor do Produto</label>
+                <input type="text" class="input-form" [(ngModel)]="purchaseValue" name="purchaseValue" placeholder="Valor do Produto" aria-label="Valor do Produto">
+            </div>
+            <div class="buttons">
+                <button type="button" class="add" (click)="productId ? editProduct() : addProduct()" [title]="productId ? 'Editar' : 'Salvar'">+</button>
+                <button type="button" class="refresh" (click)="cleanFilds()">🔁</button>
+            </div>
+        </div>
+    </form>
+    <div class="table">
+        <input type="text" placeholder="Pesquisar" class="input-form" (keyup)="applyFilter($event)">
+        <table mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="pro_nome">
+              <th mat-header-cell *matHeaderCellDef> Nome do Produto </th>
+              <td mat-cell *matCellDef="let element"> {{element.pro_nome}} </td>
+            </ng-container>
+            <ng-container matColumnDef="pro_valor">
+              <th mat-header-cell *matHeaderCellDef> Valor do Produto </th>
+              <td mat-cell *matCellDef="let element"> {{element.pro_valor}} </td>
+            </ng-container>
+            <ng-container matColumnDef="buttons">
+                <th mat-header-cell *matHeaderCellDef> Valor do Produto </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <button type="button" class="edit" (click)="edit(element.pro_id, element.pro_nome, element.pro_valor)" title="Editar">✍️</button>
+                    <button type="button" class="delete" (click)="deleteProduct(element.pro_id)" title="Deletar">X</button>
+                </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="rows"></tr>
+        </table>
+    </div>
+</main>
+  

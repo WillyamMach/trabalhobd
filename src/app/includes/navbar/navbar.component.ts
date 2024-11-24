@@ -29,4 +29,8 @@ export class NavbarComponent implements OnInit{
 
     this.router.navigate([''])
   }
+
+  redirect(url: string) {
+    this.router.navigate([url])
+  }
 }

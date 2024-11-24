@@ -6,12 +6,11 @@
             </h1>
         </section>
         <form class="login-body">
-            <input type="text" name="email" [(ngModel)]="email" class="input-form" aria-label="Escreva o seu e-mail" formControlName="email" placeholder="E-mail">
-            <input type="text" name="username" class="input-form" [(ngModel)]="username" aria-label="Escreva seu e-mail ou usuário" formControlName="username" placeholder="Nome de usuário">
-            <input type="text" name="password" class="input-form" [(ngModel)]="password" aria-label="Escreva a sua senha" formControlName="password" placeholder="Senha">
+            <input type="text" name="email" [(ngModel)]="email" class="input-form" aria-label="Escreva o seu e-mail" placeholder="E-mail">
+            <input type="text" name="username" class="input-form" [(ngModel)]="username" aria-label="Escreva seu e-mail ou usuário" placeholder="Nome de usuário">
+            <input type="text" name="password" class="input-form" [(ngModel)]="password" aria-label="Escreva a sua senha" placeholder="Senha">
 
             <button type="button" title="Enter" (click)="register()" 
-                [disabled]="registerForm.controls.email.invalid"
                 >Registrar</button>
             <a>Já possui conta? <span (click)="redirect('')">Entrar</span></a>
         </form>

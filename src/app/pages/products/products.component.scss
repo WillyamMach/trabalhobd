@@ -1,0 +1,96 @@
+main {
+    h2 {
+        margin: 40px;
+        font-weight: 500;
+        color: var(--grey);
+        font-size: 2em;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        margin: 50px;
+
+        .form-fields {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            .formInputs {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .buttons {
+                padding-top: 30px;
+
+                .add {
+                    background-color: var(--primary);
+                }
+
+                .refresh {
+                    background-color: var(--grey);
+                }
+
+                .search {
+                    background-color: var(--secondary);
+                }
+            }     
+        }
+    }
+
+    .table {
+
+        input {
+            margin-bottom: 16px;
+            float: right;
+            width: 20%;
+        }
+    }
+}
+
+.error-message {
+    margin-bottom: -40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 25.8vw;
+    color: red;
+    font-size: 0.8em;
+
+    p {
+        margin: 0;
+    }
+}
+
+.table {
+    margin: 0 auto;
+    min-width: 80vw !important;
+    width: 80vw;
+}
+
+button {
+    margin: 0 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    border: 0;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.edit {
+    background-color: var(--primary);
+}
+
+.delete {
+    background-color: var(--danger);
+}
+
+.rows:nth-child(even) {
+    background-color: #eeebeb;
+}
+
+.rows:hover {
+    background-color: #e4e0e0;
+}

@@ -1,7 +1,13 @@
 <nav>
     <ul>
         <li>
-            <img src="./assets/logout.png" (click)="logout()">
+            <a (click)="redirect('home')">Home</a>
+        </li>
+        <li>
+            <a (click)="redirect('products')">Produtos</a>
+        </li>
+        <li>
+            <a class="logout" (click)="logout()">Sair</a>
         </li>
     </ul>
 </nav>
